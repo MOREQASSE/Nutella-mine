@@ -51,3 +51,19 @@ document.querySelectorAll('.menu-card .menu-img').forEach(img => {
   });
 });
 
+document.querySelectorAll('.menu-section-title').forEach(title => {
+  title.addEventListener('click', () => {
+    const section = title.closest('.menu-section');
+    const isOpen = section.classList.contains('open');
+
+    // Close all other open sections
+    document.querySelectorAll('.menu-section.open').forEach(openSection => {
+      if (openSection !== section) {
+        openSection.classList.remove('open');
+      }
+    });
+
+    // Toggle the current section
+    section.classList.toggle('open');
+  });
+});

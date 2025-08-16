@@ -6,6 +6,29 @@
   --strawberry:#D64541;     /* accent rouge Nutella */
   --caramel:#E6B980;        /* doré caramel */
   --shadow:0 8px 24px rgba(0,0,0,0.15);
+.menu-section .menu-grid {
+  display: none;
+  overflow: hidden; /* Add this line */
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-section-title {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-section-arrow {
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-section.open .menu-section-arrow {
+  transform: rotate(180deg);
+}
+
+.menu-section.open .menu-grid {
+  display: grid;
 }
 
 *{box-sizing:border-box}
