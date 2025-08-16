@@ -1,0 +1,250 @@
+/* Reset and container */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    padding: 2rem;   
+    background: var(--cream);
+    color: var(--nutella-dark);
+    min-height: 100vh;
+  }
+  
+  /* Loyalty card */
+  #loyalty-card {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 1px solid rgba(107, 62, 37, 0.1);
+  }
+  
+  #loyalty-card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  /* Stamp circles */
+  #stamps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .stamp {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid var(--caramel);
+    border-radius: 50%;
+    background: var(--cream);
+    transition: all 0.3s ease;
+  }
+  .stamp.filled {
+    background: var(--caramel);
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(230, 185, 128, 0.4);
+  }
+  
+  /* Staff area */
+  #staff-area {
+    margin: 20px auto;
+    max-width: 400px;
+  }
+  
+  #staff-pin {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border: 2px solid rgba(107, 62, 37, 0.2);
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+    color: var(--nutella-dark);
+    transition: all 0.3s ease;
+  }
+  
+  #staff-pin:focus {
+    border-color: var(--caramel);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(230, 185, 128, 0.2);
+  }
+  
+  #staff-pin.error {
+    border-color: #e74c3c;
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  #staff-stamp-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: var(--caramel);
+    color: var(--nutella-dark);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  #staff-stamp-btn:disabled {
+    background: #e0e0e0;
+    color: #a0a0a0;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  #staff-stamp-btn:not(:disabled):hover {
+    background: var(--nutella-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(107, 62, 37, 0.15);
+  }
+  
+  /* Reset button */
+  #reset-stamps {
+    display: none;
+    margin: 15px auto 0;
+    padding: 10px 20px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #reset-stamps:hover {
+    background: #c0392b;
+  }
+  
+  #reset-stamps i {
+    margin-right: 8px;
+  }
+  
+  /* Animation for error state */
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+  }
+  
+  /* Status message */
+  #status-msg {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  /* Loyalty Information Section */
+  .loyalty-info {
+    padding: 4rem 0;
+    background: var(--nutella-dark);
+    color: var(--cream);
+  }
+  
+  .loyalty-info h2 {
+    text-align: center;
+    color: var(--caramel);
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .info-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--caramel, 0.2);
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .info-icon {
+    font-size: 2.5rem;
+    color: var(--caramel);
+    margin-bottom: 1.5rem;
+  }
+  
+  .info-card h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+  
+  .info-card p {
+    color: var(--nutella-light);
+    line-height: 1.6;
+  }
+  
+  .terms {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+  }
+  
+  .terms h3 {
+    color: var(--caramel);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .terms ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .terms li {
+    color: var(--nutella-light);
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+  }
+  
+  .terms li:before {
+    content: '•';
+    color: var(--caramel);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -0.3rem;
+  }
+  
+  @media (max-width: 768px) {
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .terms ul {
+      grid-template-columns: 1fr;
+    }
+  }
+  
