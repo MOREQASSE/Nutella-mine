@@ -74,7 +74,11 @@ a:hover{text-decoration:underline}
 
 .btn-gold { 
   background: var(--caramel); 
-  color: #2e170d; 
+  color: var(--nutella-dark); 
+}
+.btn-green { 
+  background: green; 
+  color: white; 
 }
 
 .btn-outline { 
